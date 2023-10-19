@@ -1,22 +1,8 @@
+# Im Hauptprogramm erzeugen Sie ein Tokenizer- und ein Calculator-Objekt.
+# Führen Sie dann dan Ablauf
+# - Wert einlesen
+# - Operation erzeugen
+# - Berechnung ausführen
+# durch.
+# Hier müssen alle auftretenden Exceptions zentral verwaltet werden.
 
-from calculator import Calculator
-from tokenizer import Tokenizer
-from exceptions import *
-
-if __name__ == '__main__':
-    """
-    Der Taschenrechner.
-    Hier werden alle anfallenden Exceptions der Calculator-Klasse
-    verarbeitet.
-    """
-    calc = Calculator(Tokenizer())
-    try:
-        calc.read_input()
-        calc.create_concrete_op()
-        calc.calculate()
-    except OperationException as op_ex:
-        print(op_ex)
-    except NumberFormatException as nf_ex:
-        print(nf_ex)
-    except ZeroDivisionError as error:
-        print('ERROR: Division mit 0!')
