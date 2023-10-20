@@ -1,6 +1,8 @@
 import pytest
-from tokenizer import Tokenizer  # Annahme: Deine Tokenizer-Klasse ist in einer Datei namens tokenizer.py
+
 from exceptions import OperationException, NumberFormatException
+from tokenizer import Tokenizer  # Annahme: Deine Tokenizer-Klasse ist in einer Datei namens tokenizer.py
+
 
 class TestTokenizer:
 
@@ -12,7 +14,6 @@ class TestTokenizer:
         assert tokenizer.value1 is None
         assert tokenizer.value2 is None
         assert tokenizer.operation is None
-
 
     def test_get_all_operations(self, tokenizer):
         assert tokenizer.get_all_operations() == ['+', '-', '*', '/']

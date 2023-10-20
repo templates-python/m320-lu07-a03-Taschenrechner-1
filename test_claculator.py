@@ -1,9 +1,8 @@
 import pytest
 
-from math_operations import *
 from calculator import Calculator
 from tokenizer import Tokenizer
-from exceptions import *
+
 
 class TestCalculator:
 

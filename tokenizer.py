@@ -84,7 +84,7 @@ class Tokenizer:
         # abarbeiten. Wenn das Zeichen nicht erkannt wird, wird eine Exception erzeugt.
         for sign in self._operations:
             if sign in command_line:
-                # die Zeichenkette entlang dem Operationszeichen auftrennen
+                # die Zeichenkette entlang der Operationszeichen auftrennen
                 elements = command_line.partition(sign)
                 self._operation = sign
                 # sicherstellen, dass es sich um gültige Zahlenwerte handelt
