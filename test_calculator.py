@@ -45,12 +45,12 @@ class TestCalculator:
 
     def test_read_input_invalid_operation(self, calculator, monkeypatch):
         with pytest.raises(OperationException):
-            monkeypatch.setattr('builtins.input', lambda _: '10 % 5')
+            monkeypatch.setattr('builtins.input', lambda _: "10 % 5")
             calculator.read_input()
 
     def test_read_input_invalid_number(self, calculator, monkeypatch):
         with pytest.raises(NumberFormatException):
-            monkeypatch.setattr('builtins.input', lambda _: '10 + abc')
+            monkeypatch.setattr('builtins.input', lambda _: "10 + abc")
             calculator.read_input()
 
     def test_calculator_valid_division(self, calculator, tokenizer):
