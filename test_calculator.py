@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 import pytest
 
 from calculator import Calculator
@@ -36,9 +38,10 @@ class TestCalculator:
         calculator.create_concrete_op()
         assert isinstance(calculator.math_op, Divider)
 
-    def test_read_input_valid_input(self, calculator, monkeypatch):
-        inputs = iter(['10 + 5'])
-        monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+    @patch('builtins.input', return_value='10 + 5')
+    def test_read_input_valid_input(self, calculator, monkeypatch, mock_input):
+        #inputs = iter(['10 + 5'])
+        #monkeypatch.setattr('builtins.input', lambda _: next(inputs))
         calculator.read_input()
         assert calculator._tokenizer.value1 == 10
         assert calculator._tokenizer.value2 == 5

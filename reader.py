@@ -4,10 +4,10 @@ class Reader:
     Eingabe (Tastatur) ein Device darstellt, das physisch einmal vorhanden ist.
     """
 
-    def __new__(self):
-        if not hasattr(self, '_instance'):
-            self._instance = super(Reader, self).__new__(self)
-        return self._instance
+    def __new__(cls):
+        if not hasattr(cls, '_instance'):
+            cls._instance = super(Reader, cls).__new__(cls)
+        return cls._instance
 
     def screen_info(self):
         """
