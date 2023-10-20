@@ -1,5 +1,7 @@
 import pytest
+
 from math_operations import *
+
 
 class TestMathOp:
 
@@ -14,7 +16,7 @@ class TestMathOp:
 
     def test_subtraktor(self):
         subtractor = Subtractor()
-        subtractor.execute_op(20,8)
+        subtractor.execute_op(20, 8)
         assert subtractor.result == 12
 
     def test_multiplier(self):
@@ -30,4 +32,4 @@ class TestMathOp:
     def test_divider_by_zero(self):
         divider = Divider()
         with pytest.raises(ZeroDivisionError):
-            divider.execute_op(33,0)
+            divider.execute_op(33, 0)

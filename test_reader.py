@@ -1,6 +1,7 @@
 from unittest.mock import patch
-import pytest
+
 from reader import Reader  # Annahme: Deine Reader-Klasse ist in einer Datei namens reader.py
+
 
 class TestReader:
     # Testet, ob die Singleton-Implementierung funktioniert
@@ -9,7 +10,7 @@ class TestReader:
         reader2 = Reader()
         assert reader1 is reader2
 
-#    Testet die Ausgabe der screen_info-Methode
+    #    Testet die Ausgabe der screen_info-Methode
     def test_screen_info(self, capsys):
         reader = Reader()
         reader.screen_info()
@@ -36,4 +37,3 @@ class TestReader:
         reader = Reader()
         user_input = reader.read()
         assert user_input == '   Hello   '
-

@@ -1,5 +1,7 @@
 import pytest
+
 from math_operations import MathOp
+
 
 class TestMathOPInstantiation:
 

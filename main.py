@@ -1,9 +1,9 @@
-
 from calculator import Calculator
-from tokenizer import Tokenizer
 from exceptions import *
+from tokenizer import Tokenizer
 
-if __name__ == '__main__':
+
+def main():
     """
     Der Taschenrechner.
     Hier werden alle anfallenden Exceptions der Calculator-Klasse
@@ -20,3 +20,7 @@ if __name__ == '__main__':
         print(nf_ex)
     except ZeroDivisionError as error:
         print('ERROR: Division mit 0!')
+
+
+if __name__ == '__main__':
+    main()

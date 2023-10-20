@@ -76,7 +76,7 @@ class Tokenizer:
     def split(self, command_line):
         """
         Zerlegt den String aufgrund des Vorkommens von Operationszeichen aus der Liste.
-        Fehlt das Operationszeichen, weird eine OperationException geworfen.
+        Fehlt das Operationszeichen, wird eine OperationException geworfen.
         Ist ein Zahlenwert ungültig, wird eine NumberFormatException geworfen.
         :param command_line: Eingabe des Benutzers
         """
@@ -84,7 +84,7 @@ class Tokenizer:
         # abarbeiten. Wenn das Zeichen nicht erkannt wird, wird eine Exception erzeugt.
         for sign in self._operations:
             if sign in command_line:
-                # die Zeichenkette entlang dem Operationszeichen auftrennen
+                # die Zeichenkette entlang der Operationszeichen auftrennen
                 elements = command_line.partition(sign)
                 self._operation = sign
                 # sicherstellen, dass es sich um gültige Zahlenwerte handelt

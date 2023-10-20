@@ -3,6 +3,7 @@ class Reader:
     Die Klasse dient dem Einlesen einer Eingabe. Sie ist als Singleton ausgelegt, da die
     Eingabe (Tastatur) ein Device darstellt, das physisch einmal vorhanden ist.
     """
+
     def __new__(self):
         if not hasattr(self, '_instance'):
             self._instance = super(Reader, self).__new__(self)

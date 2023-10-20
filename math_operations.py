@@ -1,9 +1,6 @@
 from abc import ABC, abstractmethod
 
 
-from abc import ABC, abstractmethod
-
-
 class MathOp(ABC):
     """
     Eine abstrakte Klasse, die eine beliebige (binäre) mathematische Operation repräsentiert.
@@ -42,6 +39,7 @@ class Adder(MathOp):
     """
     Addiert zwei Zahlen.
     """
+
     def execute_op(self, val1, val2):
         """
         Führt die Operation val1 + val2 aus.
@@ -56,6 +54,7 @@ class Subtractor(MathOp):
     """
     Subtrahiert zwei Zahlen.
     """
+
     def execute_op(self, val1, val2):
         """
         Führt die Operation val1 - val2 aus.
