@@ -98,3 +98,11 @@ class Divider(MathOp):
             self._result = val1 / val2
         else:
             raise ZeroDivisionError()
+
+class Exposer(MathOp):
+    """
+    Exponiert Wert 1 mit Wert 2.
+    """
+
+    def execute_op(self, val1, val2):
+        self._result = val1 ** val2

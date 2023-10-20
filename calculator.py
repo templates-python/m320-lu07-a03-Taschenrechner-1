@@ -54,6 +54,8 @@ class Calculator:
             self._math_op = Multiplier()
         elif self._tokenizer.operation == '/':
             self._math_op = Divider()
+        elif self._tokenizer.operation == '^':
+            self._math_op = Exposer()
         else:
             self._math_op = None
 

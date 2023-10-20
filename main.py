@@ -9,7 +9,9 @@ def main():
     Hier werden alle anfallenden Exceptions der Calculator-Klasse
     verarbeitet.
     """
-    calc = Calculator(Tokenizer())
+    tokenizer = Tokenizer()
+    tokenizer.add_operation('^')
+    calc = Calculator(tokenizer)
     try:
         calc.read_input()
         calc.create_concrete_op()
